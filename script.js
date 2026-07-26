@@ -11,7 +11,7 @@ const totalRejected = document.getElementById("totalRejected");
 
 // Array holding file objects, updated dynamically
 let uploadedFiles = [];
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "https://rule-engine-backend-835v.onrender.com";
 
 // On page initialization, sync previously stored files in files/ folder
 window.addEventListener("DOMContentLoaded", () => {
