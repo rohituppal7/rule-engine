@@ -1,0 +1,7 @@
+fastapi==0.139.2
+nltk==3.10.0
+pandas==3.0.3
+python_docx==1.2.0
+spacy==3.8.13
+titlecase==2.4.1
+uvicorn==0.51.0

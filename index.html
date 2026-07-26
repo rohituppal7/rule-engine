@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excel & Document Validation Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2 class="logo">⚙️ Rule Engine</h2>
+        <ul class="menu">
+          <li
+            class="active"
+            id="menuDashboard"
+            onclick="filterDashboard('all')"
+          >
+            📊 Dashboard
+          </li>
+          <li id="menuValidated" onclick="filterDashboard('Passed')">
+            ✅ Validated Files
+          </li>
+          <li id="menuRejected" onclick="filterDashboard('Failed')">
+            ❌ Rejected Files
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main">
+        <!-- Navbar -->
+        <div class="navbar">
+          <h1 id="dashboardTitle">Validation Rule Checker Dashboard</h1>
+          <button class="upload-btn" id="uploadBtn">+ Upload Files</button>
+
+          <!-- Hidden File Input supporting Excel, Word, and Text files -->
+          <input
+            type="file"
+            id="fileInput"
+            accept=".xlsx,.xls,.docx,.txt"
+            multiple
+            hidden
+          />
+        </div>
+
+        <!-- Dashboard Cards -->
+        <div class="cards">
+          <div class="card">
+            <h3>Total Files</h3>
+            <p id="totalFiles">0</p>
+          </div>
+          <div class="card">
+            <h3>Total Records</h3>
+            <p id="totalRecords">0</p>
+          </div>
+          <div class="card">
+            <h3>Passed Files</h3>
+            <p id="completed">0</p>
+          </div>
+          <div class="card">
+            <h3>Rejected Files</h3>
+            <!-- CHANGED LABEL -->
+            <p id="totalRejected">0</p>
+            <!-- CHANGED ID -->
+          </div>
+        </div>
+        <!-- Search -->
+        <input type="text" placeholder="Search files..." class="search" />
+
+        <!-- File Table -->
+        <table>
+          <thead>
+            <tr>
+              <th>File Name</th>
+              <th>Records Checked</th>
+              <th>Status</th>
+              <th>Date Checked</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <tr>
+              <td colspan="5">No files uploaded yet</td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+    </div>
+
+    <!-- Your updated JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

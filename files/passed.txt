@@ -1,0 +1,12 @@
+Material Type
+Product Material
+Storage Capacity
+Product Size
+Surface Finish
+Product Weight
+Material Grade
+Product Color
+Net Weight
+Voltage
+LED Type
+USB Port
